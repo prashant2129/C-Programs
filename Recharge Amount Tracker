@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int recharge, total = 0;
+    char ch;
+
+    while (1) {
+        printf("Enter recharge amount: ₹");
+        scanf("%d", &recharge);
+        total += recharge;
+
+        printf("Do you want to recharge again? (y/n): ");
+        scanf(" %c", &ch);
+
+        if (ch == 'n' || ch == 'N') break;
+    }
+
+    printf("Total recharge amount this month: ₹%d\n", total);
+    return 0;
+}
